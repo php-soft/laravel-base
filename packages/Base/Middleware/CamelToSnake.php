@@ -4,7 +4,7 @@ namespace PhpSoft\Base\Middleware;
 
 use Closure;
 
-class InputCamelToSnake
+class CamelToSnake
 {
     public function handle($request, Closure $next)
     {

@@ -30,6 +30,6 @@ class Kernel extends HttpKernel
         'auth.basic'         => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest'              => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'validate'           => \PhpSoft\Base\Validation\Middleware::class,
-        'inputCamelToSnake'  => \PhpSoft\Base\Middleware\InputCamelToSnake::class,
+        'camelToSnake'       => \PhpSoft\Base\Middleware\CamelToSnake::class,
     ];
 }

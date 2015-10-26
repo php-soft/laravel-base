@@ -1,8 +1,8 @@
 <?php
 
-class InputCamelToSnackTest extends TestCase
+class CamelToSnackTest extends TestCase
 {
-    public function testInputCamelToSnake()
+    public function testCamelToSnake()
     {
          $res = $this->call('POST', '/comments', [
             'lastName'        => 'Sconfield',

@@ -22,13 +22,13 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 
-        Route::post('/user', ['middleware'=>'validate:App\Http\Validators\UserValidate',
+        Route::post('/user', ['middleware' => 'validate:App\Http\Validators\UserValidate',
             function () {
                 return response()->json(null, 200);
             }
         ]);
 
-        Route::post('/comments', ['middleware'=>'inputCamelToSnake',
+        Route::post('/comments', ['middleware' => 'camelToSnake',
             function (Request $request) {
                 return response()->json($request->all(), 200);
             }
