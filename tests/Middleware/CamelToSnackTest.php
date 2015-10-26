@@ -1,7 +1,19 @@
 <?php
+use Illuminate\Http\Request;
 
 class CamelToSnackTest extends TestCase
 {
+    public function setUp()
+    {
+        parent::setUp();
+
+        Route::post('/comments', ['middleware' => 'camelToSnake',
+            function (Request $request) {
+                return response()->json($request->all(), 200);
+            }
+        ]);
+    }
+
     public function testCamelToSnake()
     {
          $res = $this->call('POST', '/comments', [
