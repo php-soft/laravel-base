@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
     /**
@@ -23,6 +25,12 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
         Route::post('/user', ['middleware'=>'validate:App\Http\Validators\UserValidate',
             function () {
                 return response()->json(null, 200);
+            }
+        ]);
+
+        Route::post('/comments', ['middleware'=>'inputCamelToSnake',
+            function (Request $request) {
+                return response()->json($request->all(), 200);
             }
         ]);
 
