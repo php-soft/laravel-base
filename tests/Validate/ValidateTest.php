@@ -2,6 +2,17 @@
 
 class ValidateTest extends TestCase
 {
+    public function setUp()
+    {
+        parent::setUp();
+
+        Route::post('/user', ['middleware' => 'validate:App\Http\Validators\UserValidate',
+                function () {
+                    return response()->json(null, 200);
+                }
+            ]);
+    }
+
     public function testValidateFailure()
     {
         $res = $this->call('POST', '/user');
