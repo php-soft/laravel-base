@@ -20,7 +20,7 @@
     },
     "autoload": {
         "classmap": [
-            "packages/Base/database"
+            "packages/Base"
         ],
         "psr-4": {
             "PhpSoft\\Base\\": "packages/Base"
