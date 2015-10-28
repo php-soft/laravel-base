@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpSoft\Base\Validation;
+namespace PhpSoft\Base\Middleware;
 
 use Closure;
 use Validator;
 
-class Middleware
+class Validation
 {
     public function handle($request, Closure $next, $classValidate)
     {

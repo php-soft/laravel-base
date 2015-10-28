@@ -4,14 +4,14 @@ namespace App\Http\Validators;
 
 use Request;
 use Validator as IlluminateValidator;
-use PhpSoft\Base\Validation\Contract;
+use PhpSoft\Base\Contracts\Validation;
 
 /**
  * User Validate
  *
  * return array
  */
-class UserValidate implements Contract
+class UserValidate implements Validation
 {
     /**
      * Custom validator

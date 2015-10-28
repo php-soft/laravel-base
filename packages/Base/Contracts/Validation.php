@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpSoft\Base\Validation;
+namespace PhpSoft\Base\Contracts;
 
-interface Contract
+interface Validation
 {
     /**
      * Custom validator rule
