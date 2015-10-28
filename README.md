@@ -59,7 +59,7 @@ Add route middlewares in app/Http/Kernel.php
 ```php
 protected $routeMiddleware = [
     // ...
-    'validate'   => \PhpSoft\Base\Validation\Middleware::class,
+    'validate'   => \PhpSoft\Base\Middleware\Validation::class,
 ];
 ```
 
@@ -118,4 +118,3 @@ class UserValidate implements Contract
     }
 }
 ```
-
