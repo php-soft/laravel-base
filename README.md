@@ -1,4 +1,4 @@
-# Laravel Utilities
+# Laravel Base
 [![Build Status](https://travis-ci.org/php-soft/laravel-base.svg)](https://travis-ci.org/php-soft/laravel-base)
 
 Somes utilities for Laravel 5.x
